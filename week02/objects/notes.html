@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Week 02 Notes | BYU-I WDD 330</title>
+  </head>
+  <body>
+    <h1>Week 2 Notes</h1>
+    <h2>Chapter 2 Programming Basics</h2>
+
+    <ul>
+      <li>
+        Commenting in Javascript: Single line comments use // for the entire
+        line to be commented out. Multi-line comments start with /* and end with
+        */
+      </li>
+      <li>
+        Reserved Words in js are words that are reserved for the syntax of the
+        language and not allowed to be used to name variables or function
+        parameters. (Some include: abstract, boolean, break, catch, class,
+        const, continue, delete, double, false, function, import, etc. )
+      </li>
+      <li>
+        Datatypes of Javascript: String, Symbol, Number, Boolean, Undefined,
+        Null (Primitive datatypes), and Object (Non-primitive).
+      </li>
+      <li>
+        Variables must be declared before being assigned. You can assign
+        multiple variables on a single line separated by commas. Variables
+        declared with keyword "let" may be reassigned later. Variables declared
+        using keyword "const" means they actually aren't variable and cannot be
+        reassigned. Values inside of a non-primitive type CAN be changed even if
+        declared with const. (like a name within an array as opposed to a name
+        set as a constant in a primitive type). Var can still be used to declare
+        a variable, but is older and not as current in its scope. Let is the
+        replacement for Var in most cases.
+      </li>
+      <li>
+        Scope: Block scoped is variables that only exist inside the block they
+        are declared in.<strong> Global Scope </strong>is any variable declared
+        ouside of a block. It can be accessed and used anywhere in the program.
+        Not the best practice, global variables are kept to a minimum for best
+        practices (easy to forget the name of all variables used, and you cannot
+        use the same name or risk overriding another one at global scope.)
+        <strong>Local Scope</strong> is any variable established with Let or
+        Const defined within a block.
+      </li>
+      <li>
+        You can use basic math arithmetic operations in javascript (addition,
+        subtraction, multiplication, division, modulus, etc). It will follow
+        order of operations (PEMDAS)
+      </li>
+      <li>
+        Logical Operators- can be used wtih any primitive value or object. Based
+        on whether truthy or falsy. Logical Not (!), Logical AND (&&), and
+        Logical OR (||)
+      </li>
+    </ul>
+
+    <h2>Chapter 3 Arays, Logic, and Loops</h2>
+
+    <ul>
+      <li>
+        Arrays are ordered lists of values. Create an array by using square
+        brackets and input data separated by commas.
+      </li>
+      <li>
+        Array literals can be created by assigning many values in the initial
+        array creation
+      </li>
+      <li>
+        You can adjust length of array, add values, delete values, manipulate
+        the data. Pop removes last item from array. Shift method removes first
+        item in array. Push method appends new value to the end of array.
+        Unshift method appends new item to the beginning of the array.
+      </li>
+      <li>
+        Merging Arrays: concat() method merges with one or more arrays. Join()
+        method also works, using &. Slicing and Splicing creates a subarray.
+        Slicing takes the positions you ask for. Splicing removes itms and puts
+        new ones in their place. Splice method is destructive by writing over
+        what already existed. Can also be non-destructive and simply add a new
+        value at a certain position, moving everything back a position.
+      </li>
+      <li>
+        Arrays can be reversed with reverse() method. Sorted with sort() method.
+        You can find a value in an array by using indexOf() method, or
+        includes() method.
+      </li>
+      <li>
+        Multidimensional Arrays are arrays of arrays. (Inception, haha!)
+        Coordinates are a good example of this. You can use the spread operator
+        to nest arrays into another array.
+      </li>
+      <li>
+        Sets are data structures that represent a collection of unique values
+        and cannot have duplicate values. Sets are helpful because they keep
+        track of data without having to check if values are duplicated. To
+        create a set, use new operator and set() constructor.
+      </li>
+      <li>
+        Set Methods: Number of values in a set are found with size() method.
+        Check to see if item is in set with has() method. Delete() method
+        removes values from set. Clear() method removes all values from set.
+        Sets can be converted to arrays with spread operator in array literal.
+      </li>
+      <li>
+        Maps are way to keep list of key and value pairs. Different from
+        Javascript objects because maps can be any data type, while objects are
+        limited to strings for key values. Maps are easy to find the number of
+        key-value pairs with size property. Use get() method to get values.
+      </li>
+      <li>
+        Logic: If statements, else statements, ternary operators (if...else
+        statements shorthand), switch statements, loops, while loops, infinite
+        loops, do...while loops, for loops, nested for loops,
+      </li>
+    </ul>
+
+    <h2>Chapter 4 - Functions</h2>
+
+    <ul>
+      <li>
+        Functions are first-class objects that behave as primitive data types.
+        Can be used inside variables, arrays, and returned by other functions.
+      </li>
+      <li>
+        Define a function by using function Declarations. Starts with funciton
+        keyword, name of function, parantheses, and then block of code inside
+        curly brackets {}
+      </li>
+      <li>
+        Function Expressions: defined as an anonymous function by using const =
+        function() syntax.
+      </li>
+      <li>DRY: Keep code DRY (Don't Repeat Yourself)</li>
+      <li>
+        Parameters and Arguments are used interchangeably--values provided for
+        the function as input. Parameters are set when function is defined. When
+        the function is called, it gets passed Arguments.
+      </li>
+      <li>
+        Function Rest operator used to deal with multiple arguments: creates an
+        array of arguments that are available inside the function. Use ... in
+        front of last parameter in function declaration.
+      </li>
+      <li>Default parameters are what is used if no arguments are provided.</li>
+      <li>
+        Arrow Functions: Smaller syntax to declare a function. Identified by the
+        'arrow' symbol ( => ). Parameters come before the arrow and main body of
+        function comes after. Always anonymous, you must assign them to a
+        variable to refer to them.
+      </li>
+      <li>
+        Function and Variable hoisting; Howiting is moving all variable and
+        function declarations to the top of curent scope.
+      </li>
+      <li>
+        Callbacks: functions that are passed as arguments are callbacks.
+        (Functions that invoke other functions to complete)
+      </li>
+      <li>
+        Arrays have methods that use callbacks. forEach() loop method will loop
+        through array and invoke callback function using each value as an
+        argument. Map() method is similar to forEach(). Goes over an array,
+        takes callback function. Processes data returned from databases in array
+        form. Map() method returns new array that replaces each value. Reduce()
+        method works over array. Combines each result to return single value.
+        Filter() method returns new array that has true items from original
+        array when passed to callback.
+      </li>
+      
+    </ul>
+    <h3>Questions:</h3>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+
+    <script src="objects.js"></script>
+  </body>
+</html>
