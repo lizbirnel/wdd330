@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Week 03 Notes | BYU-I WDD 330</title>
+  </head>
+  <body>
+    <h1>Week 3 Notes</h1>
+    <p>
+      See console for many examples of experimenting with the concepts and code
+      this week.
+    </p>
+    <h2>Chapter 5 Object Literals</h2>
+
+    <ul>
+      <li>
+        Objects in Javascript are self-contained sets of related values and
+        functions. They can use strings, numbers, booleans, arrays, and
+        functions. If a property's value is a function, it is called a method.
+        Objects are used to keep any related info and functionality together in
+        one place. eg. perimeter and area of a square would make sense to group
+        as methods for the same object
+      </li>
+      <li>
+        Object literals are objects created directly in the language and wrapped
+        in curly braces {}. They allow objects to be created quickly without
+        defining a class. Properties contain key-value pairs separated by
+        commas. Remember best practices for naming the property key (meaning,
+        one word, no spaces. Use underscores _ or camelcase to avoid spaces in
+        names).
+      </li>
+      <li>
+        Creating objects- to create object literal, enter a pair of {}. (const
+        spiderman = {}; ) or use constructor function to open empty object
+        (const spiderman = new Object(); ) This isn't preferred, stick with the
+        object literal method to create objects. (uses less typing and provides
+        easy way to use one statement).
+      </li>
+      <li>
+        Accessing properties in objects--use dot notation ( superman.name) or
+        bracket notation (superman['name']). Dot notation is more common,
+        bracket notation is the only way to access property names that break the
+        naming rules. You can also build a string concatenated property in
+        bracket notation. (superman["real" + " " + "name"] ). If you try to
+        access a property that doesn't exist, it will return undefined.
+      </li>
+      <li>
+        Computed properties- Javascriptcode can be placed inside [] and property
+        key will be return value of that code. const hulk = { name: 'Hulk',
+        ['catch' + 'Phrase']: 'Hulk Smash!'}; creates the property of
+        catchPhrase
+      </li>
+      <li>
+        To call an object's method, we can use . or [] notation. It's the same
+        as calling a function, so you need to use () after method name.
+        superman.fly() or superman['fly']. To see if method exists, use the in
+        operator. 'city' in superman returns Boolean false. superman.city!==
+        undefined; returns false (because it DOES = undefined.) Can also use the
+        hasOwnProperty() method. superman.hasOwnProperty('city'); returns false,
+        while superman.hasOwnProperty('name'); returns true.  To find all properties of an object, loop through them with a for in loop. 
+        To add new properties and methods, assign a value to the new property. use the dot notation like this: superman.city = 'Metropolis'; 
+        To change a value of propery, you just reassign it with the = sign. superman['real name'] = 'Kal-El';
+      To remove a property, use delete operator. (delete superman.fly)
+      </li>
+      <li>
+        Nested Objects are possible for an object to contain other objects. The values can be accessed by referencing each property name in order with . or []. 
+        Objects can be cloned. Any changes made to either reference of the object will affect the same object. 
+      </li>
+      <li>
+        Object literals can be passed as parameters to functions. This is helpful if there are a large number of parameters, because it allows arguments to be provided by name and in any order. You don't have to remember them when you call the function.
+        This is called Named Parameters.
+      </li>
+      <li>The keyword 'this' refers to the object itself that it is within. 
+      
+      </li>
+      <li>
+        Built-in Objects--2 main ones, arrays and functions. And many global objects that can be accessed anywhere in a program. 
+      </li>
+      <li>
+        JSON Objects:property names must be double-quoted. permitted values are double-quoted strings, numbers, true, false, null, arrays, and objects. functions are not permitted values. JSON is becoming more popular for data storage format. parse() method takes a string of data in JSON and returns a JS object.  Stringify() method does the opposite and turns a JS object into a string of JSON data. You can use /n to create a new line between data rows. 
+      </li>
+      <li>
+        Math Object-- built-in object with several properties, including .PI, .SQRT2, SQRT1_2, E, LN2, LN10, LOG2E, LOG10E. Mathematical methods carry out lots of various mathematical operations (+-*/). Absolute values method, Math.abs() rturns absolue value of a number. Math.ceil() method returns a rounded up number to the next integer or remain the same if already an integer. Math.floor rounds down to the nearest integer. Math.round() rounds to the nearest integer. Math.trunc() returns just the integer and cuts off the decimal place without rounding. Math.exp() raises number to power of Euler's constant. Math.pow() raises to the power of another number. Math.sqrt() returns positive squar root. Math.cbrt() returns cubed root. Math.hypot() returns the calculated hypotneuse. Math.log() returns logarithm of number. Math.max and Math.min return either the maximum of a set of numbers or minimum, respectively. 
+        Math trigonometric functions are also built in. (sin, cosin, tan, etc.). Math.random() generates random numbers between 0 and 1. add a 6*Math.random() to generate a number between 0 and 6. Wrap in a Math.floor to get random integer. Math.floor(6 * Math.random() );
+      </li>
+      <li>
+        Getter Methods:  getTime(), getTimezoneOfset(), getDay(), getUTCDay(), getDate(), getMonth(), getYear(), getHours(), getMinutes(), getSeconds(), getMilliseconds(), etc. 
+      </li>
+      <li>
+        Setter Methods: setTime(), setDay(), setYear(), setMonth(), etc. 
+      </li>
+      <li>
+        Special Characters: . matches any character except line breaks, \w matches any word character, \W matches any non-word character, \d matches any digit, \D matches non-digit character, \s matches any whitespace character, \S matches non-whitespace character. 
+      </li>
+   
+    </ul>
+
+    <h2>Chapter 6 - Document Object Model</h2>
+
+    <ul>
+      <li>
+        <a href="heroes.html">DOM Heroes Activity</a>
+      </li>
+    
+      <li>The DOM represents HTML document as network of connected nodes in a tree-like structure. It treats everything on web page as a node. HTML tags, text in them, attributes. HTML tag is root node, everything else is a child. History of the DOM: created by the W3C by standardizing process in 1998. DOM level 2 published in 2000, and DOM level 3 in 2004. 
+      </li>
+      <li>getting elements: Access the body element of web page and assign variable body. </li>
+      <li>Nodes have a numerical code to signify what they are. 1: element, 2: attribute, 3: text, 8: comment, 9: body</li>
+      <li>DOM shortcut methods: Document.body, Document.images (returns list of images in document), Document.links( returns list of links), Document.anchors (returns list of all <a> elements with a name attribute, Document.forms (returns list of all forms in the document.</a></li>
+      <li>Get Element by: getElementById, getElementsByTagName, getElementsByClassName, </li>
+      <li>Query Selectors: document.querySelector() method uses CSS notation to find first element that matches CSS selector. document.querySelectorAll gets all with that CSS notation.</li>
+      <li>jQuery is popular Javascript framework that makes it easy to find elements on a page with CSS-style syntax. </li>
+      <li>childNodes property is a list of all the nodes that are children of the node concerned.childen property returns any element nodes that are children of that node. firstChild returns first child of a node. lastChild returns last child of node. parentNode returns parent node of an element. nextSibling and previousSibling return next and previous adjacent nods of same parents.  </li>
+      <li>You can find the value of a node by using nodeValue method. Or use the textContent property. You can get Element's attribute. You can set the attribute using setAttribute.  </li>
+      <li>className Property, classList lets you see a list of all classes and add a class to the list for an element without overwriting it. </li>
+      <li>Creating an element with createElement() takes a parameter and returns that element. createTextNode() method takes parameter (a string with text that goes in the node). 3 steps to add a new element: 1. Create element node, 2. create the text node, 3. append the text node to the element node. 
+        Function createElement (tag, text) is quick method to create element.  </li>
+    
+    </ul>
+
+    <h2>Chapter 7 - Events</h2>
+
+    <ul>
+      <li>
+        <a href="events.html">Event Listener Activity</a>
+      </li>
+      <li>Event Listeners are basically setting a notification to alert you when something happens. Instead of the program constantly checking to see if something happened, an event listener will let it know when it happens. If you want the program to do something when a user clicks on the page, you'd use an event listener to listen for any clicks on the page. he click event occurs when a user clicks with the mouse, presses the Enter key, or taps the screen, making it a very useful all-round event covering many types of interaction.  </li>
+      <li>Using inline Event Handlers: Javascript code is mixed up with HTML markup, only one event handler for each even-type can be attached to an element, the code for event handlers is hidden away in the markup, JavaScript code has to be entered in a string, so be careful when using apostrophes and quotes.</li>
+      <li>Current standard is using Event Listeners. addEventListener() method is calld on a node object, the node which it's being applied to. (document.body.addEventListener('click', doSomething); it can also be called without a node, and applied to the global object like the whole browser window. Parameters are, first the type of event, second a callback function. </li>
+      <li>Event Target property rturns reference to the node that fired the event. </li>
+      <li>Coordinates of an Event: screenX and screenY show number of pixels from left and top of the screen, clientX and clientY  of the browser window, pageX and pageY show where it took place in the document.</li>
+      <li>Types of Events: Mouse Events, Keyboard Events, and Touch Events</li>
+      <li>You can remove event listeners using the removeEventListener() method. </li>
+      <li>Be careful when you use preventDefault to change default behavior. Users will expect certain behaviors and preventing them can be confusing. </li>
+      <li>Event Propagation: if you click on an element, ou are clicking all the elements it's nested inside of. So an li tag is also clicking the ul, body and html tags. Propagation is the order that eents fire on each element. There is bubbling and capturing (two forms of propagation). Bubbling is when event fires on the element clicked on first, then bubbles up the document tree at each parent until it reaches the root. Capturing starts an event at th root and propagates downwards, to the child elements. </li>
+      <li>Add Event Listener method has third parameter, a boolean value that specifies whether capturing should be used or not. Defaults to false, which is why bubbling happens by default. </li>
+      <li>Event Delegation can be used to attach an event listener to a parent element in order to capture events that are triggered by child elements. You can attach an event listener to the parent elemet, then use the target property to identify the element that was clicked on. </li>
+    </ul>
+    <h3>Questions:</h3>
+    <ol>
+      <li>
+        Is it common to make little changes from the DOM in regular programming? Or is this more of a specific tutorial that just shows the capabilities it has, but not common practice? Is it mainly for testing purposes? I know it said we'd mainly use a stylesheet to encompass all of the styles, of course, so I'm just more curious about that.
+      </li>
+      <li>
+        I think I just need more practice with event listeners. It's interesting to see the many ways they can work, but is it common to use multiple like this in the activity at once? I have a difficult time thinking of when I'll need them in application, although I'm sure it will become fairly obvious as I go. I hope!
+      </li>
+    </ol>
+
+    <script src="objects.js"></script>
+  </body>
+</html>
