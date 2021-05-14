@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Week 04 Notes | BYU-I WDD 330</title>
+  </head>
+  <body>
+    <h1>Week 4 Notes</h1>
+    <p>
+      See console for many examples of experimenting with the concepts and code
+      this week.
+    </p>
+    <h2>Chapter 8 Forms</h2>
+
+    <ul>
+      <li>
+        <a href="form/search.html">Search Form</a>
+      </li>
+      <li>
+        See Search form console linked above for examples of code and how to access various elements of forms.
+      </li>
+      <li>
+        Accessing Form Elements: can use numerical index, name atribute, square bracket notation, etc to access the form object. We can access form controls using their 'name' attributes as if it were a property of the form object itself, and using square bracket notation as well.
+      </li>
+      <li>
+        Form Properties and Methods: form.submit() will submit a form automatically. Forms can be submitted manually by user clicking a button or input element if ithas the type attribute of submit, or even image. (type='submit' value='Submit', or type='image')
+      </li>
+      <li>
+       form.reset() method will reset all the form controls back to original initial values in HTML. If a button has reset for its type attribute, you don't need extra scripting to accomplish this. (type='reset'). Reset buttons are too easy to click and wipe out all data that's been entered, so they're not recommended and should be considered carefully before use.
+      </li>
+      <li>
+        form.action property can be used to set the action attribute. This can send it to a different URL to be processed on the server. (form.action = '(some location)')
+      </li>
+      <li>
+        Submitting Forms- This usually sends the content of the form to the server to be processes. JavaSCript can be used to intercept the form if you add an event listener.         
+      </li>
+      <li>
+        Retrieving and Changing values from a form: Use a Value property to retrieve the text inside the field. You can use this to report back what was searched for.
+        You can also change the value by using JS. (input.value = 'Search Here';). This leaves the text inside the input field box, though, and it needs to be deleted before entering text of your own as the user. Use focus and blur event handlers to fix that, and the default text can disappear when the input field box is clicked. This is similar to the placeholder attribute, but the placeholder attribute does not add an actual value to the input field. 
+      </li>
+      <li>
+        Form Controls include input fields (text, passwords, check boxes, radio buttons, and file uploads), select menus (drop-down lists of options), text area elements (allows for longer text entry), and button elements to submit forms.
+      </li>
+      <li>
+        <a href="hero.html">Hero Form Activity</a>
+      </li>
+      <li>
+        Input fields are the most common types of form controls. There are several categories of input fields. Text input fields are for short pieces of text like usernames. type="text" is the default value, so it's not required, but it is best to use it anyway for the cohesivity of the code. Passord type for input fields works like a text type, but it conceals the characters as they are entered so they can't be read. Checkbox Input fields are used to select different options that can be true or false. The user can select more than one checkbox. Checkboxes have a checked property that tells if they have been checked or not with a boolean true or false answer. 
+        Radio Buttons are another type, but they can only have one option be selected. You can selct one checked radio button initially by setting a value="" to be checked in the html tag.
+      </li>
+      <li>
+        Hidden Input Fields can be created and are not displayed by the browser. They do have a 'value' attribute that can contain info submitted with the form. These are used to send info like settings, but shouldn't be used for sensitive data! It's easily visible in the html. 
+        File Input fields are used to upload files. Most browsers provide a browse button to search for a file. Other input types include number, tel, and color. 
+      </li>
+      <li>
+        Select drop-down lists can be used for selecting one or more options from a list. Must use 'multiple' attribute to select more than one. 
+      </li>
+      <li>
+        Text area elements are used for long pieces of text over multiple lines like a comment or blog post. They work like input fields, and access them using a 'name' attribute. 
+      </li>
+      <li>
+        Buttons- default type is 'submit'. Another type is 'reset'. The other type is 'button'. This one just creates a clickable button that can have an event listener attached to it. 
+      </li>
+      <li>
+        Form validation checks whether a user has entered the info in a form correctly. Can include a required field is completed, email address are valid format, number is entered instead of letter, password is minimum number of characters, etc. 
+        Validation can be on server side or client side using JavaSCript. It's best to use both client and server side validation. It's easy to bypass the JavaSCript on the user end and bypass the rules. JavaSCriptvalidation should be used to enhance UX when filling in a form by giving feedback about errors before it's submitted. Back it with more validation on the server side after submitting. 
+      </li>
+   
+    </ul>
+
+    <h2>Chapter 12 - OOP</h2>
+
+    <ul>
+      <li>
+        <a href="heroes.html">DOM Heroes Activity</a>
+      </li>
+    
+      <li>
+      </li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    
+    </ul>
+
+    <h2>Chapter 15 - Modular JavaScript</h2>
+
+    <ul>
+      <li>
+        <a href="events.html">Event Listener Activity</a>
+      </li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <h3>Questions:</h3>
+    <ol>
+      <li>
+        
+      </li>
+      <li>
+        
+      </li>
+    </ol>
+
+    <script src="objects.js"></script>
+  </body>
+</html>
