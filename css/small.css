@@ -71,6 +71,10 @@ body {
     color: #3C403D;
   }
 
+  ul a:hover {
+    color: white;
+  }
+
   li {
     background-color: #A3BCB6;
     margin: 15px ;
