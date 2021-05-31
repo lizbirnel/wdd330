@@ -28,6 +28,7 @@ body {
 
  .portfolio-content div {
    background-color: #A3BCB6;
+  
    padding: 1rem;
    margin: 1rem;
  }
@@ -40,6 +41,10 @@ body {
   h1, h2 {
     color: white;
     /*padding: 1em;*/
+  }
+
+  .portfolio-content h1, .portfolio-content h2 {
+    color: #3C403D;
   }
   
   a {
@@ -63,7 +68,7 @@ body {
 
   ul a {
     text-decoration: none;
-    color: white;
+    color: #3C403D;
   }
 
   li {
@@ -76,6 +81,7 @@ body {
 
   li:hover {
     background-color: #3C403D;
+    color: white;
   }
 
   
