@@ -5,7 +5,10 @@ $container-bordercolor: #000;
 $textbox-bordercolor: lightgray;
 $button-textcolor: #fff;
 $add-button-color: #4caf50;
-$clear-button-color: #9f6060;
+$clear-button-color: purple;
+//$clear-button-color: #9f6060;
+$toggle-button-color: navy;
+$toggle-button-color-active: orange;
 
 
 @mixin mq($size) {

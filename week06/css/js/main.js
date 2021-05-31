@@ -2,7 +2,7 @@ import ToDoList from "./todolist.js";
 import ToDoItem from "./todoitem.js";
 
 const toDoList = new ToDoList();
-let showCompleted = false;
+
 // Launch app
 document.addEventListener("readystatechange", (event) => {
     if (event.target.readyState === "complete") {
@@ -24,29 +24,11 @@ const initApp = () => {
         if (list.length) {
             const confirmed = confirm("Are you sure you want to clear the entire list?");
             if (confirmed) {
-                showCompleted = false;
                 toDoList.clearList();
                 updatePersistentData(toDoList.getList());
                 refreshThePage();
             };
         };
-    });
-
-    const showCompleteBtn = document.getElementById("showComplete");
-    const showIncompleteBtn = document.getElementById("showIncomplete");
-    showCompleteBtn.addEventListener("click", (event) => {
-        showCompleted = true;
-        showCompleteBtn.classList.add("active");
-        showIncompleteBtn.classList.remove("active");
-        refreshThePage();
-    });
-
-    
-    showIncompleteBtn.addEventListener("click", (event) => {
-        showCompleted = false;
-        showIncompleteBtn.classList.add("active");
-        showCompleteBtn.classList.remove("active");
-        refreshThePage();
     });
 
     //Procedural
@@ -59,7 +41,7 @@ const loadListObject = () => {
     if (typeof storedList !== "string") return;
     const parsedList = JSON.parse(storedList);
     parsedList.forEach(itemObj => {
-        const newToDoItem = createNewItem(itemObj._id, itemObj._item, itemObj._completed);
+        const newToDoItem = createNewItem(itemObj._id, itemObj._item);
         toDoList.addItemToList(newToDoItem);
     });
 };
@@ -87,16 +69,7 @@ const deleteContents = (parentElement) => {
 const renderList = () => {
     const list = toDoList.getList();
     list.forEach(item => {
-        if(showCompleted) {
-            if(item.getComplete()) {
-                buildListItem(item);
-            }
-        }
-        else {
-            if(!item.getComplete()) {
-                buildListItem(item);
-            }
-        }
+        buildListItem(item);
     });
 };
 
@@ -107,7 +80,6 @@ const buildListItem = (item) => {
     check.type = "checkbox";
     check.id = item.getId();
     check.tabIndex = 0;
-    check.checked = item.getComplete();
     addClickListenerToCheckbox(check);
     const label = document.createElement("label");
     label.htmlFor = item.getId();
@@ -120,14 +92,10 @@ const buildListItem = (item) => {
 
 const addClickListenerToCheckbox = (checkbox) => {
     checkbox.addEventListener("click", (event) => {
-        //toDoList.removeItemFromList(checkbox.id);
-        //const removedText = getLabelText(checkbox.id);
-        //updateScreenReaderConfirmation(removedText, "removed from list");
-        const item = toDoList.getItemById(checkbox.id);
-        const completed = item.getComplete();
-        if(completed) item.setComplete(false);
-        else item.setComplete(true);
+        toDoList.removeItemFromList(checkbox.id);
         updatePersistentData(toDoList.getList());
+        const removedText = getLabelText(checkbox.id);
+        updateScreenReaderConfirmation(removedText, "removed from list");
         setTimeout(() => {
             refreshThePage();
         }, 1000);
@@ -154,7 +122,7 @@ const processSubmission = () => {
     const newEntryText = getNewEntry();
     if (!newEntryText.length) return;
     const nextItemId = calcNextItemId();
-    const toDoItem = createNewItem(nextItemId, newEntryText, false);
+    const toDoItem = createNewItem(nextItemId, newEntryText);
     toDoList.addItemToList(toDoItem);
     updatePersistentData(toDoList.getList());
     updateScreenReaderConfirmation(newEntryText, "added");
@@ -174,11 +142,10 @@ const calcNextItemId = () => {
     return nextItemId;
 };
 
-const createNewItem = (itemId, itemText, itemCompleted) => {
+const createNewItem = (itemId, itemText) => {
     const toDo = new ToDoItem();
     toDo.setId(itemId);
     toDo.setItem(itemText);
-    toDo.setComplete(itemCompleted);
     return toDo;
 };
 

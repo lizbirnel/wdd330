@@ -24,4 +24,14 @@ export default class ToDoList {
             }
         }
     }
+
+    getItemById(id) {
+        const list = this._list;
+        for (let i = 0; i < list.length; i++) {
+            if(list[i]._id == id) {
+                return list[i];
+            }
+        }
+    }
+
 }

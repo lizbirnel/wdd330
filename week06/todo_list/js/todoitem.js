@@ -2,6 +2,7 @@ export default class ToDoItem {
     constructor() {
         this._id = null;
         this._item = null;
+        this._completed = false;
     }
 
     getId() {
@@ -18,5 +19,13 @@ export default class ToDoItem {
 
     setItem(item) {
         this._item = item;
+    }
+
+    getComplete() {
+        return this._completed;
+    }
+
+    setComplete(completed) {
+        this._completed = completed;
     }
 }

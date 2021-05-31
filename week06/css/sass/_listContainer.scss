@@ -22,23 +22,6 @@
         }
     }
 
-    .filterBtns {
-        button {
-            font-size: 1rem;
-            background-color: $toggle-button-color;
-            padding: 0 0.1rem;
-            margin-bottom: 0.5rem;
-            width: auto;
-            @include mq(768px) {
-                padding: 0 0.5rem;  
-            }
-        }
-
-        .active {
-            background-color: $toggle-button-color-active;
-        }
-    }
-
     .item {
         display: flex;
         justify-content: flex-start;
@@ -56,17 +39,13 @@
         }
 
         input[type="checkbox"]:focus + label {
-            text-decoration: line-through ;
+            text-decoration: underline;
         }
 
         label {
             font-size: 1.1rem;
         }
     }
-
-    
-
-    
 
     .confirmation {
         position: absolute;
@@ -76,4 +55,3 @@
 
 
 }
-
