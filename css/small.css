@@ -21,9 +21,9 @@ body {
   }
 
  .portfolio-content {
-   display: grid;
-   grid-template-columns: 1fr 2fr;
+   display: block;
    max-width: 100%;
+   text-align: center;
  }
 
  .portfolio-content div {
@@ -46,11 +46,20 @@ body {
       color: #373737;
   }
 
+  img {
+    width: 50%;
+  }
   ul{
     list-style-type: none;
+    width: 100%;
     /*display: grid;
     grid-template-columns: 1fr 1fr;*/
   }
+
+#tableContents {
+  margin: 0;
+  padding: 0;
+}
 
   ul a {
     text-decoration: none;
@@ -59,7 +68,7 @@ body {
 
   li {
     background-color: #A3BCB6;
-    margin: 15px 30px;
+    margin: 15px ;
     width: 90%;
     padding: 1rem 2rem;
    /*grid-column-start: -1;*/
