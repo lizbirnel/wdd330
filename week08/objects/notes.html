@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Week 07 Notes | BYU-I WDD 330</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Week 7 Notes</h1>
+    </header>
+    <p>
+      See console for many examples of experimenting with the concepts and code
+      this week.
+    </p>
+    <h2>Chapter 11 Further Functions</h2>
+
+    <ul>
+      <li>
+        Function Properties and methods: All functions have a length property that returns the number of parameters it has. 
+      </li>
+      <li>
+        Call() method can set a value of "this" inside a function to an object that is provided as first argument.
+      </li>
+      <li>
+        Memoization provides result caching. You can save it in a cache property to be used again later. 
+      </li>
+      <li>
+        IIFE: Immediately Invoked Function Expression (invoked as soon as it's defined). Do this by placing parentheses at the end of the function definition.
+        Useful to keep variable names wrapped in the scope of a function and not on the global level
+      </li>
+      <li>No way to remove a variable from scope once it's declared</li>
+      <li>Functions define and redefine themselves. Assign an anonymous function to a variable that has the same name as the function</li>
+      <li>Init-time branching--optimizes to the browser being used</li>
+      <li>Recursive Functions: invokes itself until a condition is met. </li>
+      <li>callback hell... yikes! Too many nested callbacks making a pyramid of confusion.</li>
+      <li>Promises: represent future result of asynchronous operation. Don't do anything tha can't already be achieved with callbacks, but they simplify the process</li>
+      <li>promises are created using constructor function (resolve, reject)</li>
+
+    </ul>
+    <h2>Chapter 13 AJAX</h2>
+    <ul>
+      <li>
+        Clients and Servers : JavaScript is clinet-side scripting language. Server side is required when requesting resources using Ajax.
+        This involves server-side languages like PHP, Node.js, Ruby, etc.
+      </li>
+      <li>
+        CORS: Cross-origin resource sharing: A solution to the problem as it allows resources to be requested from another website outside the original domain.
+      </li>
+      <li>
+        AJAX: Asynchronous JavaScript and XML. Most common type of data returned is JSON, more lightweight and easier to parse than XML. 
+      </li>
+      <li>
+        APIs: Application Programming Interface--a collection of methods that allow external access to another program or service. Many websites allow controlled access to data via public APIs. This is like the API we accessed in 230 for the weather site and weather data.
+      </li>
+      <li>Fetch API: uses promises to avoid callback hell. Streamlines many concepts. </li>
+      <li>Redirect() method can redirect to another url. </li>
+      <li>text() method takes stream of text from response, reads it, and returns a promise</li>
+
+    </ul>
+    
+  
+
+    <script src="objects.js"></script>
+  </body>
+</html>

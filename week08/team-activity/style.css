@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Montserrat&display=swap');
+
+body {
+
+    font-family: "Libre Baskerville", Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: gold;
+    text-align: center;    
+    }
+section {
+    padding: 3%;
+}
+
+    h1 {
+    color:#2a3640;
+    font-size: 2rem;
+    }
+
+    h2 {
+    font-size: 1.5rem;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    }
+
+      
+    div.tradingCard {
+        margin-left: auto;
+        margin-right: auto;
+        align-items: top;  
+        padding: 5%      
+    }
+    
+    img {
+        width: 85%;
+        padding: 2%;
+        margin-bottom: 2rem;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: cover;
+    }
+    
+    section {
+        background-color: #2a3640;
+        padding-top: .5rem;
+        margin: 0 0 1.2rem 0;
+        box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.4);
+        
+    }
+
+
+@media only screen and (min-width: 35rem) {
+
+h1 {
+    font-size: 2.0rem;
+        }
+h2 {
+    font-size: 1.2rem;
+        }
+    
+p {
+    font-size: .8rem;
+        }
+div.tradingCard {
+    min-width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tradingCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    grid-gap: 1.0rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    h1 {
+        font-size: 2.8rem;
+        }
+    h2 {
+        font-size: 1.5rem;
+        }
+    
+    p {
+        font-size: 1rem;
+        }
+    div.tradingCard {
+        min-width: 64rem;
+        max-width: 80%;
+    }
+    div.tradingCard {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    footer {
+        font-size: 1.2rem;
+    }
+}
