@@ -51,6 +51,10 @@ body {
       color: #373737;
   }
 
+  footer a {
+    color: white;
+  }
+
   img {
     width: 50%;
   }

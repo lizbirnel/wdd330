@@ -12,6 +12,11 @@ header, footer {
     color: white;
 }
 
+main {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
 h1 {
     font-family: 'Playfair Display', serif;
      font-size: 2.5rem;
@@ -24,6 +29,10 @@ h1 {
 
    a {
     color: #373737;
+}
+
+footer a {
+  color: white;
 }
 
 ul{

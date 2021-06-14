@@ -1,65 +1,144 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <title>Week 07 Notes | BYU-I WDD 330</title>
+    <title>Week 08 Notes | BYU-I WDD 330</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
     <header>
-      <h1>Week 7 Notes</h1>
+      <h1>Week 8 Notes</h1>
     </header>
-    <p>
+    <main>
+    <!-- <p>
       See console for many examples of experimenting with the concepts and code
       this week.
-    </p>
-    <h2>Chapter 11 Further Functions</h2>
+    </p> -->
+    <h2>Chapter 8 CSS Transforms and Transitions</h2>
 
-    <ul>
-      <li>
-        Function Properties and methods: All functions have a length property that returns the number of parameters it has. 
-      </li>
-      <li>
-        Call() method can set a value of "this" inside a function to an object that is provided as first argument.
-      </li>
-      <li>
-        Memoization provides result caching. You can save it in a cache property to be used again later. 
-      </li>
-      <li>
-        IIFE: Immediately Invoked Function Expression (invoked as soon as it's defined). Do this by placing parentheses at the end of the function definition.
-        Useful to keep variable names wrapped in the scope of a function and not on the global level
-      </li>
-      <li>No way to remove a variable from scope once it's declared</li>
-      <li>Functions define and redefine themselves. Assign an anonymous function to a variable that has the same name as the function</li>
-      <li>Init-time branching--optimizes to the browser being used</li>
-      <li>Recursive Functions: invokes itself until a condition is met. </li>
-      <li>callback hell... yikes! Too many nested callbacks making a pyramid of confusion.</li>
-      <li>Promises: represent future result of asynchronous operation. Don't do anything tha can't already be achieved with callbacks, but they simplify the process</li>
-      <li>promises are created using constructor function (resolve, reject)</li>
+    <section>
+      <h3>Transform Property</h3>
+      <p>- lets you lets you translate, rotate, scale, and/or skew any element on the page. </p>
+      <p>- can move elements left, right, up, down on the page</p>
+      <h3>Translation</h3>
+      <p>-Translate functions allow you to move elements left, right, up or down.</p>
+      <p>-Similar to postion: relative;</p>
+      <p>-When you use translation function, it doesn't impact the flow of the document</p>
+      <p>-Translated elemnts can only be moved relative to current position.</p>
+      <p>-moves along x and y axes (+ moves up and right, - moves down and left)</p>
+      <h3>Scaling</h3>
+      <p>-scales an element by defined factors horizontally then vertically.</p>
+      <p>-if only one value is provided, it counts for both x and y values (maintaining aspect ratio)</p>
+      <p>-scale(1) leaves same size, scale(2) doubles, scale(0.5) halves</p>
+      <p>-scaled elements grow outwards or scale inwards from the center. Center stays the same. This can be changed with Transform-origin property </p>
+      <p>-declare scale in the same transform: line as translate, just separate by a space</p>
+      <p>-scaling doesn't impact document flow. If you scale inline-block elements, text around it will not adjust for the changes and could cause problems. Transforming does not cause reflow of all elements.</p>
+      <h3>Rotation</h3>
+      <p>-rotates element around point of origin by specified angle degree value. </p>
+      <p>-default, the point of origin is center of element.</p>
+      <p>-positive degrees move clockwise, negative move counterclockwise</p>
+      <h3>Skew</h3>
+      <p>-specifies a skew of x and y axes:  skew(x,y)</p>
+      <p>-if seconded parameter is left off, skew only applies to x axis.</p>
+      <p>-can also skew individual axes with skewX() and skewY()</p>
+      <h3>Changing Origin of Transform</h3>
+      <p>-you can control origin for transforms by using transform-origin property</p>
+      <p>Same syntax as background-position, defaults to center of object</p>
+      <h3>Choose Ordering Carefully</h3>
+      <p>-order of transform functions matters— if you rotate before translating, your translate direction is on the rotated axis.</p>
+      <h3>Transitions</h3>
+      <p>-transitions require less client-side processing than animations and can appear smoother</p>
+      <p>-allow values of CSS properties to change over time</p>
+      <p>-can create gradual changes instead of sudden, like a hover that changes link colors slowly</p>
+      <p>-help create more dynamic pages with subtle animations</p>
+      <p>-declared along with regular styles on an element</p>
+      <p>Steps for simple transition in CSS:</p>
+      <ol>
+        <li>Declare original state of element in default style declaration.</li>
+        <li>Declare final state of transitioned element (for example, :hover state)</li>
+        <li>Include transition functions in your default style declaration using transition properties, including: transition-property, transition-duration, transition-timing-function, and transition-delay.</li>
+      </ol>
+      <h3>Transition-duration Property</h3>
+      <p>-sets how long transition will take to go from default state to the transitioned state.</p>
+      <p>-can be specified in seconds (s) or milliseconds (ms).</p>
+      <p>-200ms (or .2 s) is generally considered optimum time for a transition. If slower, the website seems slow, faster might be too subtle.</p>
+      <h3>transition-timing-function Property</h3>
+      <p>-lets you control the pace of transition in more detail.</p>
+      <p>-common timing-functions are ease, linear, ease-in, ease-out, or ease-in-out</p>
+      <p>-you can even describe your own cubic-bezier function with four numeric parameters, like: cubic-bezier(0,0,1,1). </p>
+      <h3>transition-delay Property</h3>
+      <p>-you can introduce a delay before the transition begins.</p>
+      <p>-default si 0, but add a time in ms or s to delay. </p>
+      <h3>transition Shorthand Property</h3>
+      <p>-shorten your lines of code for a single transition by using shorthand</p>
+      <p>-separate propertiesof transitions by spaces, can be in any order If you use a delay you must include a duration, and duration comes before delay in order.</p>
+      <h3>Multiple Transitions</h3>
+      <p>-transitions allow for multiple in one call, like changing color at same time as changing rotation and size</p>
+      <p>-you can shorthand to specify multiple transitions at different durations, delays, and timing functions. Specify all transition values for each transition, separated by a comma between transitions. <br>For example— transition: transform 0.2s ease-out-50ms, color 0.1s linear 50ms;</p>
+      <h3>Animations</h3>
+      <p>-allow you to control each step fo an animation via keyframes</p>
+      <p>-a keyframe is a snapshot that defines a starting or end point of any smooth transition</p>
+      <p>-transitions limit you to a start and end keyframe, but animations allow us to add any number of keyframes in between to make animations more complex.</p>
 
-    </ul>
-    <h2>Chapter 13 AJAX</h2>
-    <ul>
-      <li>
-        Clients and Servers : JavaScript is clinet-side scripting language. Server side is required when requesting resources using Ajax.
-        This involves server-side languages like PHP, Node.js, Ruby, etc.
-      </li>
-      <li>
-        CORS: Cross-origin resource sharing: A solution to the problem as it allows resources to be requested from another website outside the original domain.
-      </li>
-      <li>
-        AJAX: Asynchronous JavaScript and XML. Most common type of data returned is JSON, more lightweight and easier to parse than XML. 
-      </li>
-      <li>
-        APIs: Application Programming Interface--a collection of methods that allow external access to another program or service. Many websites allow controlled access to data via public APIs. This is like the API we accessed in 230 for the weather site and weather data.
-      </li>
-      <li>Fetch API: uses promises to avoid callback hell. Streamlines many concepts. </li>
-      <li>Redirect() method can redirect to another url. </li>
-      <li>text() method takes stream of text from response, reads it, and returns a promise</li>
+      <h2>Chapter 12</h2>
+      <h3>Canvas</h3>
+      <p>-we can draw anything through JavaScript!</p>
+      <p>-can improve performance of websites by avoiding need to download images off the network.</p>
+      <p>-can draw shapes and lines, arcs and text, gradients and patterns. Can also manipulate pixels in images and video.</p>
+      <p>-was developed by Apple, then adopted by Mozilla and Opera, standardized by WHATWG and HTML 5</p>
+      <h3>Examples</h3>
+      <p>Basic Canvas with border</p>
+      <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+      <p>All drawing on HTML canvas must be done with JavaScript</p>
+      <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 150, 75);
+        </script>
+      <p></p>
+      <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #000000;"></canvas>
+      <script>var canvas = document.getElementById("myCanvas2");
+      var ctx = canvas.getContext("2d");
+      ctx.moveTo(0, 0);
+      ctx.lineTo(200, 100);
+      ctx.stroke();
+    </script>
+<canvas id="myCanvas3" width="200" height="100" style="border:1px solid #000000;"></canvas>
+<script>
+var canvas = document.getElementById("myCanvas3");
+  var ctx = canvas.getContext("2d");
+  ctx.beginPath();
+  ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+  ctx.stroke();
+  </script>
 
-    </ul>
-    
+<canvas id="myCanvas4" width="200" height="100" style="border:1px dashed #000000;"></canvas>
+<script>var c = document.getElementById("myCanvas4");
+  var ctx = c.getContext("2d");
   
+  // Create gradient
+  var grd = ctx.createLinearGradient(0, 0, 200, 0);
+  grd.addColorStop(0, "red");
+  grd.addColorStop(1, "white");
+  
+  // Fill with gradient
+  ctx.fillStyle = grd;
+  ctx.fillRect(10, 10, 150, 80);</script>
 
-    <script src="objects.js"></script>
+<canvas id="myCanvas5" width="300" height="200" style="border: 3px dotted #000000;"></canvas>
+<script>
+  var canvas = document.getElementById("myCanvas5");
+var ctx = canvas.getContext("2d");
+ctx.font = "30px Playfair Display";
+ctx.fillStyle = "red";
+ctx.textAlign = "center";
+ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
+</script>
+
+    </section>
+  </main>
+  <footer>
+    <p><a href="/index.html"> Elizabeth Birnel</a> | Utah | WDD 330 | BYUI</p>
+    </footer>
   </body>
 </html>
