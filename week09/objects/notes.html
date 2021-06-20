@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Week 09 Notes | BYU-I WDD 330</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Week 9 Notes</h1>
+    </header>
+    <main>
+      <!-- <p>
+      See console for many examples of experimenting with the concepts and code
+      this week.
+    </p> -->
+      <h2>Chapter 9 The Window Object</h2>
+
+      <section>
+        <p>
+          Window object is the browser's global object, which represents the
+          browser window that contains a web page
+        </p>
+        <h3>Browser Object Model</h3>
+        <p>
+          - a collection of properties and methods that contain info about
+          browser and computer screen.
+        </p>
+        <p>
+          We can find out which browser is being used to view a page, find ou
+          the dimensions of screen it's viewed on, and which pages have been
+          visited before the current page. Can also creeate pop-up windows
+          (annoy your users! Ha!)
+        </p>
+        <p>
+          No official standard for BOM, but there are a number of
+          properties/methods supported by all major browsers making some sort of
+          standards. They're available through the window object. Every browser
+          window, tab, popup, frame, and iframe has a window object
+        </p>
+        <h3>Global</h3>
+        <p>
+          Global variables are actual properties of a global object. Globals are
+          created without const, let, or var keywords, and can be accessed in
+          all parts of the program
+        </p>
+        <p>In browser, the global object is the window object.</p>
+        <p>
+          parseInt() and isNaN() are methods of the global object or the window
+          object. Full way to write is window.parseInt(4.2), but we usually
+          shorten to parseInt() only.
+        </p>
+        <p></p>
+        <h2>Chapter 14 HTML5 APIs</h2>
+        <h3>Canvas</h3>
+        <p>-we can draw anything through JavaScript!</p>
+
+        <script>
+          var canvas = document.getElementById("myCanvas5");
+          var ctx = canvas.getContext("2d");
+          ctx.font = "30px Playfair Display";
+          ctx.fillStyle = "red";
+          ctx.textAlign = "center";
+          ctx.fillText("Hello World", canvas.width / 2, canvas.height / 2);
+        </script>
+      </section>
+    </main>
+    <footer>
+      <p><a href="/index.html"> Elizabeth Birnel</a> | Utah | WDD 330 | BYUI</p>
+    </footer>
+  </body>
+</html>

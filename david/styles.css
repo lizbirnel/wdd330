@@ -1,0 +1,39 @@
+h1 {
+    color: red;
+    text-decoration: underline;
+}
+
+p {
+    background-color: red;
+    color: white
+}
+
+h1{
+    color:goldenrod;
+}
+
+.navbar {
+    background-color: royalblue;
+    color: white;
+    font-weight: bold;
+    padding: 25px;
+}
+
+.navbar a {
+    color: white;
+    margin: 25px;
+}
+
+.menu-start {
+    background-color: maroon;
+    color: ivory;
+    padding: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+ul li {
+    line-height: 30px;
+
+}
