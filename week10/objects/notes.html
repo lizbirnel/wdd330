@@ -1,229 +1,251 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <title>Week 09 Notes | BYU-I WDD 330</title>
+    <title>Week 10 Notes | BYU-I WDD 330</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
     <header>
-      <h1>Week 9 Notes</h1>
+      <h1>Week 10 Notes</h1>
     </header>
     <main>
       <!-- <p>
       See console for many examples of experimenting with the concepts and code
       this week.
     </p> -->
-      <h2>Chapter 9 The Window Object</h2>
-
+      <h2>MDN: Validating Forms</h2>
       <section>
+        <h3>Client-side form validation</h3>
         <p>
-          -Window object is the browser's global object, which represents the
-          browser window that contains a web page
-        </p>
-        <h3>Browser Object Model</h3>
-        <p>
-          - a collection of properties and methods that contain info about
-          browser and computer screen.
+          - Before submitting data to the server backend, use client-side
+          validation to ensure data requirements are met
         </p>
         <p>
-          -We can find out which browser is being used to view a page, find ou
-          the dimensions of screen it's viewed on, and which pages have been
-          visited before the current page. Can also creeate pop-up windows
-          (annoy your users! Ha!)
+          - Client-side is initial check and important for good UX design,
+          allows for user to fix right away
         </p>
         <p>
-          -No official standard for BOM, but there are a number of
-          properties/methods supported by all major browsers making some sort of
-          standards. They're available through the window object. Every browser
-          window, tab, popup, frame, and iframe has a window object
-        </p>
-        <h3>Global</h3>
-        <p>
-          -Global variables are actual properties of a global object. Globals are
-          created without const, let, or var keywords, and can be accessed in
-          all parts of the program
-        </p>
-        <p>In browser, the global object is the window object.</p>
-        <p>
-          -parseInt() and isNaN() are methods of the global object or the window
-          object. Full way to write is window.parseInt(4.2), but we usually
-          shorten to parseInt() only.
-        </p>
-        <h3>Browser History</h3>
-        <p>
-          - Window history property can be used to access info about any
-          previously visited pages in current browser session
+          - If it gets to server and is rejected, that can cause noticeable
+          delay with the processing to the server and back to the user
         </p>
         <p>
-          - window.history.length property shows how many pages have been visited
-          before the current page
+          - Client-side validation is not an exhaustive security measure—always
+          use server-side validation as well as client-side! Client-side is easy
+          to bypass and hack
         </p>
         <p>
-          - window.history.go() method can be used to go to a specific page (0 is
-          current page)
+          - Form validation is to help get the right data in right format,
+          protect users' data, and protect ourselves
         </p>
         <p>
-          - windowhistory.go(1); will go forward 1 page. <br />
-          - window.history.go(0); reloads current page. <br />
-          - window.history.go(-1); goes back 1 page.
+          - 2 types of client-side validation: Built-in validation (uses HTML5
+          form validation) and JS validation (completely customizeable, but you
+          need to create it)
+        </p>
+        <h3>Built-in form validation</h3>
+        <p>- Ability to validate most user data without JS</p>
+        <p>
+          - Required-specifies which fields need to be filled out to submit the
+          form
+        </p>
+        <p>- minlength/maxlength min and max length of strings</p>
+        <p>
+          - min and max- specifies the min and max values fo numerical input
+          types
+        </p>
+        <p>- type- which type data needs to be (number, email address, etc)</p>
+        <p>
+          - pattern- regular expression that defines a pattern for entered data
+          to follow
         </p>
         <p>
-          - also can use window.history.forward() and window.history.back()
-          methods
-        </p>
-        <h3>Screen Info</h3>
-        <p>
-          - window.screen object contains info about the screen the browser is
-          displayed on. Find height and width of screen in pixels using height
-          and width properties. (window.screen.height, and window.screen.width)
+          - If data meets all of the rules specified, it is considered valid. If
+          not, it's invalid
         </p>
         <p>
-          - availHeight and availWidth can be used to find height and width
-          excluding operating system menus. window.screen.availWidth and
-          window.screen.availHeight
+          - If valid, element matches :valid CSS pseudo-class, so you can style
+          valid elements. If user tries to send data, browser will submit the
+          form.
         </p>
         <p>
-          - colorDepth can find the color bit depth of the user's monitor (mostly
-          used for statistics) window.screen.colorDepth;
-        </p>
-        <h3>Document Object</h3>
-        <p>
-          - Each window contains document object. This has properties ad methods
-          that deal with page that has been loaded into the window.
-        </p>
-        <p>
-          - document.write() method writes string of text to the page. If a page
-          is already loaded it completely replaces current document
-        </p>
-        <p>- You can add html as part of the document.write string.</p>
-        <p>
-          - document.write() is not popular to use, highly frowned upon because it
-          can only be used by mixing JS in an HTML document
-        </p>
-        <h3>Cookies</h3>
-        <p>- Cookies are small files saved locally on user's computer.</p>
-        <p>
-          - Browsers don't remember anything from one request to another, so every
-          time a user visits a page, nothing is rmembered.
-        </p>
-        <p>
-          - cookies are used to sidestep the problem and store info that can be
-          retrieved between requests.
-        </p>
-        <p>
-          - Cookies are restricted by only being read by a web page from the same
-          domain that set them. This stops sites being able to access info about
-          users from other sites they've visited.
-        </p>
-        <p>
-          - cookies are limited to storing up to 4kb of data, but 20 cookies are
-          allowed per domain, so sometimes a lot of data
-        </p>
-        <p>
-          - can be used for personalizing user's browsing experience to store user
-          prefereneces, keep tack of choices (like a shopping cart)
-        </p>
-        <p>
-          - to create a cookie, assign it to JavaScript "cookie jar" using
-          document.cookie property
-        </p>
-        <p>- document.cookie acts like a special type of string.</p>
-        <p>
-          - To change a cookie value, reassign it to document.cookie using the
-          same name with a different value.
-        </p>
-        <h3>Timing Functions</h3>
-        <p>
-          - setTimeout() method accepts a callback to a function as first
-          parameter and number of milliseconds as its second parameter.
-        </p>
-        <p>- clearTimeout() method cancels the timeout.</p>
-        <p>
-          - setInterval() is similar to setTimeout but it repeatedly invokes
-          callback function after those seconds.
-        </p>
-        <h3>Animation</h3>
-        <p>
-          - setTimeOut() and setInterval() methods can be used to animate elements
-          on a web page.
+          - If invalid, element matches :invalid pseudo-class so you can style
+          invalid elements. Form will be blocked from submitting with error
+          message
         </p>
 
-        <h2>Chapter 14 HTML5 APIs</h2>
-        <h3>HTML5</h3>
-        <p>- W3C plans to develop future versions of HTML5 much more frequently than previously. HTML5.1 has already become latest and 5.2 is in development.</p>
-        <h3>Data- Attribute</h3>
-        <p>- data- attribute is a way of embedding data in a web page with custom attributes that are ignored by browser, and are private to a page </p>
-        <p>- Their sole purpose is to be used by JavaScript program. Perfect for adding data that can be used as hook to access info about particular element on page</p>
-        <p>- names of attributes must include format: 
-          <ul><li>start with data-</li>
-          <li>contain only lowercase letters, numbers, hyphens, dots, colons, or underscores</li>
-        <li>include an optional string value</li></ul>
+        <h3>Validating against regular expression</h3>
+        <p>
+          - Pattern attribute- expects a regular expression as its value (regex)
         </p>
-        <p>- each element has a dataset property that can be used to access any data- attribute</p>
-        <h3>HTML5 APIs</h3>
-        <p>- HTML5 specification contains a number of APIs that help gain access to hardware like cameras, batteries, geolocation and graphics card. </p>
-        <h3>HTML5 Web Storage</h3>
-        <p> - web storage API provides key-value store on client's computer similar to using cookies, but has more storage capapcity and is easier to use. </p>
-        <p>- good for storing info about users, and storing application-specific info to be used during future sessions </p>
-        <p>- different than cookies because info is not shared with server on every request, info is available in multiple windows of browser if domain is the same, and storage capacity limit is much greater than cookies.</p>
-        <p>- if a browser supports Web Storage API, window object will have property called localStorage. Also a sessionStorage object that works the same way, but stores data for only the current session</p>
-        <p>- instead of using getItem() and setItem() methods, you can assign them instead with localStorage.name, for example</p>
-        <p>- remove from local storage by using removeItem (localStorage.removeItem('name');</p>
-        <p>- delete local storage by using delete localStorage.name;</p>
-        <p>- clear everything or completely remove everything by using the clear() method-- localStorage.clear();</p>
-        <h3>Geolocation</h3>
-        <p>- Geolocation API used to obtain geographical postiion of device. It can find the exact location, and link to nearby places or measure speed at which user is moving. Crazy!</p>
-        <p>- example would be a search by location</p>
-        <p>- with privacy concerns, user must grant permission first!</p>
-        <p>- has several properties to find information about location and movement, like speed, altitude, heading, and timestamp. </p>
-        <h3>Web Workers</h3>
-        <p>- allow processes to be run in the background. </p>
-        <p>- use Worker() constructor function to create a new worker</p>
-        <p>- use postMessage() to send message and start worker working</p>
-        <p>- when worker has completed task, it can be stopped using terminate() method</p>
-        <h3>Websockets</h3>
-        <p>- new protocol that allows two-way communication with a server – also known as push messaging. This means that a connection is kept open and responses are ‘pushed’ to the client as soon as they are received.</p>
-        <p><a href="websocket.html">Websocket Example Here</a></p>
-        <h3>Multimedia</h3>
-        <p>- Audio clips can be inserted into page with audio tag, using src attribute to point to audio file</p>
-        <p>- video clips are inserted with video tag and src attribute</p>
-        <p>- content inside audio or video tags will only display if browser doesn't support them. Controls attribute can be added wihtout any value and will display native play, pause, and volumen controls. </p>
-        <p>- play(), pause(), and volume methods and properties can be used</p>
-        <h3>Drawing with Canvas</h3>
-        <p>- canvas element allows graphics to be drawn onto web page in real time with JS. </p>
-        <canvas id='canvas' width='400' height='400'>Sorry, but your browser does not support the canvas element</canvas>
+        <p>
+          - regex patterns are used to match character combinations in text
+          strings (ideal for form validation and serve other variety of uses in
+          JS)
+        </p>
+        <p>
+          - Regex patterns are complex! Some basic examples are: <br />a: match
+          one character that is a(ntot b, not aa, etc)<br />abc: matches a,
+          followed by b, followed by c<br />ab?c: matches a, optionally followed
+          by b, followed by c. (ac or abc)<br />ab*c: matches a, optionally
+          followed by any number of b's, followed by c (ac, abc, abbbbbbbc,
+          etc)<br />a|b: matches one character that is a or b<br />abc|xyz:
+          matches exactly abc or exactly xyz (not abcxyz or a or y, etc.)
+        </p>
 
+        <a
+          class="notesLink"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions"
+          >More Regular Expression Info</a
+        >
+        <p>...</p>
 
-        <script>
-          const canvasElement = document.getElementById('canvas');
-          const context = canvasElement.getContext('2d');
-          context.fillStyle = "#0000cc"; // a blue fill color 
-context.strokeStyle = "#ccc"; // a gray stroke color
-context.lineWidth = 4;
-context.fillRect(10,10,100,50);
-context.strokeRect(10,100,100,50);
+        <a class="notesLink" href="form-validation.html"
+          >Favorite Fruit Form Validation Example</a
+        >
+        <h3>Constraining length</h3>
+        <p>
+          - you can constrain length of text fields using minlength and
+          maxlength attributes
+        </p>
+        <p>
+          - Browsers often don't allow user to type a longer than expected value
+          in fields
+        </p>
+        <p>
+          - better UX design is to provide character count feedback in an
+          accessible manner
+        </p>
+        <h3>Constraining value of entries</h3>
+        <p>
+          - number fields: use min and max attributes to provide a range of
+          acceptable values
+        </p>
+        <h3>Validating forms using JavaScript</h3>
+        <p>
+          - must use JavaScript if you want to customize look and feel of error
+          messages
+        </p>
+        <p>
+          - Constraint Validation API: consists of set of methods and properties
+          (button, fieldset, input, output, select, and textarea elements.
+        </p>
+        <p>
+          - validationMessage: returns localized message about constraints not
+          met
+        </p>
+        <p>
+          - validity: Returns ValidityState object that tells various issues
+          like patternmismatch, tooLong or tooShort, rangeOverflow or
+          rangeUnderflow, typeMismatch, valid, and valueMissing
+        </p>
+        <p>
+          - willValidate: returns true if element will be validated when
+          submitted, false if not
+        </p>
+        <p>
+          - Implementing a customized error message is a common case of
+          constraint validation API.
+        </p>
 
-context.beginPath();
-context.moveTo(130, 50);
-context.lineTo(180, 50);
-context.moveTo(155, 50);
-context.lineTo(155, 90);
-context.strokeStyle = '#c00';
-context.lineWidth = 15;
-context.stroke();
+        <a class="notesLink" href="form-validation-3.html"
+          >Custom Error Message Example</a
+        >
+        <p>...</p>
 
-context.beginPath();
-context.arc(200, 200, 30, 0, Math.PI * 2, false);
-context.strokeStyle = '#ff0';
-context.lineWidth = 4;
-context.stroke();
+        <a class="notesLink" href="form-validation-4.html"
+          >Another Custom Error Message Example</a
+        >
 
-context.fillStyle = '#0c0'; // a blue fill color
-context.font = 'bold 26px Playfair Display sans-serif';
-context.fillText('Hello', 20, 200);
+        <h2>MDN: Using Fetch</h2>
+        <h3>Fetch API</h3>
+        <p>
+          - The Fetch API provides JavaScript interface for accessing a
+          manipulating requests and responses. Provides global fetch() method to
+          provide easy, logical way to fetch resources across network
+        </p>
+        <p>
+          - Fetch provids single logical place to define HTTP related concepts
+          like CORS and extensions to HTTP
+        </p>
+        <p>
+          - Fetch specification differs from jQuery.ajax(): Promise returned
+          from fetch() won't reject on HTTP error status. As soon as server
+          responds with headers, Promise will resolve normally
+        </p>
+        <p>
+          - fetch() won't send cross-origin cookies unless you set them in init
+          option.
+        </p>
+        <p>
+          - simplest use o fetch() takes one argument of the path to the
+          resource you want and returns a promise containing the response
+        </p>
+        <p>
+          - if you want the actual JSON, you must use json() method to extrat
+          the data/content fromt the promise response
+        </p>
+        <p>
+          To cause browsers to send a request with credentials included on both
+          same-origin and cross-origin, use credentials: 'include' to the init
+          object you pass
+        </p>
+        <p>`fetch('https://example.com', { credentials: 'include' });`</p>
+        <p>- to not use credentials in request, use credentials: 'omit'</p>
+        <p>- use fetch() to POST JSON-encoded data</p>
+        <p>
+          - files can be uploaded using an HTML type="file" input element,
+          FormData() and fetch()
+        </p>
+        <p>- can upload multiple files by adding multiple as attribute</p>
+        <h3>Checking for success</h3>
+        <p>
+          - a fetch() promise will reject with an error. An accurate check for
+          successful fetch() would check for promise resolved, then check that
+          Response.ok property is true.
+        </p>
+        <h3>Supply your own request object</h3>
+        <p>
+          - you can create a request object using Request() constructor and pass
+          in as a fetch() method argument
+        </p>
+        <p>Request() accepts same parameters as fetch()</p>
+        <h3>Headers</h3>
+        <p>
+          - Headers interface allows you to create your own headers object with
+          Headers() constructor.
+        </p>
+        <p>- Headers object is a simple multimap of names to values</p>
+        <p>- Contents can be queried and retrieved</p>
+        <p>
+          - Good use case for headers is checking whether content type is
+          correct before processing further
+        </p>
+        <h3>Guard</h3>
+        <p>
+          - Headers' objects have a guard property because they can be sent in
+          requests and received in responses and have limitations
+        </p>
+        <p>
+          - Guard affects which mutation operations are allowed on headers
+          object
+        </p>
+        <p>
+          - possible guard values include none, request, request-no-cors,
+          response, and immutable
+        </p>
+        <h3>Response objects</h3>
+        <p>
+          - most common response properties are Response.status (default value
+          200, but an integer), Response.statusText (a string with default of
+          ""), and Response.ok (shorthand for checking status in range 200-299
+          and returns Boolean)
+        </p>
+        <p>
+          - Response() constructor takes two optional arguments, body for the
+          response and init object
+        </p>
 
-         
-        </script>
+        <script></script>
       </section>
     </main>
     <footer>

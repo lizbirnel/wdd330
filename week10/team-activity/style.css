@@ -1,0 +1,46 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+main {
+    width: 75%;
+    margin: 0 auto;
+}
+
+#radiusSettings {
+    margin: 10px auto;
+
+}
+
+#radiusSettings input {
+    padding: .75rem;
+    margin: 10px;
+}
+.submit {
+    background-color: coral;
+    padding: .75rem;
+}
+
+#quakeList {
+    width: 100%;
+    list-style-type: none;
+    padding-inline-start: 10px;
+    /* margin: 0 auto; */
+}
+
+#quakeList li {
+    padding: 2rem;
+}
+
+#quakeList li:nth-of-type(2n+1) {
+    background-color: cadetblue;
+}
+
+@media only screen and (max-width: 600px) {
+    #quakeList {
+        max-width: 100%;
+        /* margin: 0 auto; */
+    }
+
+   
+  }

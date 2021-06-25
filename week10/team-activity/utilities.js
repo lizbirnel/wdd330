@@ -12,8 +12,13 @@ export function getJSON(url) {
     });
 }
 
-export const getLocation = function (options) {
+export function getLocation(options) {
   return new Promise(function (resolve, reject) {
     navigator.geolocation.getCurrentPosition(resolve, reject, options);
   });
-};
+}
+
+// const testURL =
+//   "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2019-01-01&endtime=2019-02-02";
+
+// console.log(getJSON(testURL));

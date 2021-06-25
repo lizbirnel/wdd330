@@ -4,13 +4,30 @@
     <meta charset="utf-8" />
     <title>Local Quakes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <main>
-      <h1>Quake List</h1>
-      <ul id="quakeList"></ul>
+      <div class="quakes">
+        <h1>Quake List</h1>
+        <form id="radiusSettings">
+          <label
+            >Radius
+            <input
+              id="newRadius"
+              type="number"
+              min="1"
+              max="1000"
+              value="100"
+            />
+          </label>
+          <input class="submit" type="submit" value="Get updated Results" />
+        </form>
+        <ul id="quakeList"></ul>
+        <div id="quakeDetailArea"></div>
+      </div>
     </main>
-    <script type="module" src="index.js"></script>
+    <script src="index.js" type="module" />
   </body>
 </html>

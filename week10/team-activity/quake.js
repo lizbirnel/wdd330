@@ -1,5 +1,6 @@
-import { getJSON } from "./utilities.js";
+import {getJSON} from "./utilities.js";
 // Quake Model
+
 export default class Quake {
   constructor() {
     this.baseUrl =
@@ -8,6 +9,17 @@ export default class Quake {
     this._quakes = [];
   }
   async getEarthQuakesByRadius(position, radius = 100) {
+    // const baseUrl = `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2019-01-01&endtime=2019-02-02`;
+    const adjustUrl =
+      this.baseUrl +
+      "&latitude=" +
+      position.lat +
+      "&longitude=" +
+      position.lon +
+      "&maxradiuskm=" +
+      radius;
+
+    this._quakes = await getJSON(adjustUrl);
     // use the getJSON function and the position provided to build out the correct URL to get the data we need.  Store it into this._quakes, then return it
     return this._quakes;
   }

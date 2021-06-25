@@ -66,13 +66,41 @@ ul a {
     color: white;
   }
 
-  .notesLink {
-background-color: #A3BCB6;
-padding: 10px 25px;
-text-decoration: none;
+form {
+    font: 1em sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
-  .notesLink:hover {
-    background-color: #39603D;
-    color: white;
+  p > label {
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  textarea,
+  fieldset {
+    width : 100%;
+    border: 1px solid #333;
+    box-sizing: border-box;
+  }
+
+ button {
+background-color: #A3BCB6;
+padding: 10px 25px;
+  }
+
+  button:hover {
+      background-color: #39603D;
+      color: white;
+      cursor: pointer;
+  }
+
+  input:invalid {
+    box-shadow: 0 0 5px 1px red;
+  }
+
+  input:focus:invalid {
+    box-shadow: none;
   }
