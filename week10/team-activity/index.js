@@ -1,6 +1,6 @@
 // import {getJSON, getLocation} from "./utilities.js";
 
-import QuakesController from "./QuakesController.js";
+import QuakesController from "./quakescontroller.js";
 
 const myController = new QuakesController();
 
