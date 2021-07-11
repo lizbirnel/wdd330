@@ -39,6 +39,10 @@ const links = [
     label: "Week10 notes",
     url: "week10/index.html",
   },
+  {
+    label: "Final Project Progress",
+    url: "week11/index.html",
+  },
 ];
 
 let list = document.getElementById("tableContents");

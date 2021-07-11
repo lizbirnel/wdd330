@@ -1,0 +1,36 @@
+@media only screen and (min-width: 35rem){
+
+    h1 {
+        font-size: 2.75rem;
+        letter-spacing: .1rem;
+    }
+
+    .icons-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        /* max-width: 35rem; */
+     }
+
+
+     footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+/*****piano styling*******/
+
+     /* .nowplaying {
+        font-size: 120px;
+        line-height: 1;
+        color: #991b1e;
+        text-shadow: 0 0 5rem #028ae9;
+        transition: all .07s ease;
+        min-height: 120px;
+      } */
+
+
+
+
+    }
