@@ -41,7 +41,7 @@ const links = [
   },
   {
     label: "Final Project Progress",
-    url: "week11/index.html",
+    url: "week11/music-room/index.html",
   },
 ];
 
