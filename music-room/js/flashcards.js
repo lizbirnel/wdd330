@@ -1,5 +1,5 @@
 const requestURL =
-  "http://localhost:5500/week11/music-room/js/music-symbols.json";
+  "https://lizbirnel.github.io/wdd330/music-room/js/music-symbols.json";
 
 // const musicSymbols = ;
 

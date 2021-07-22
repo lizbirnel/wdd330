@@ -1,5 +1,5 @@
 const requestURL =
-  "http://localhost:5500/week11/music-room/js/notesflashcard.json";
+  "https://lizbirnel.github.io/wdd330/music-room/js/notesflashcard.json";
 
 // const musicSymbols = ;
 
