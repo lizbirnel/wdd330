@@ -3,37 +3,37 @@
         {
             "name": "Bass Clef",
             "desc": "",
-            "url": "/week11/music-room/images/flashcards-symbols/bass-clef.jpg"
+            "url": "/wdd330/music-room/images/flashcards-symbols/bass-clef.jpg"
         },
         {
             "name": "Treble Clef",
             "desc": "",
-            "url": "/week11/music-room/images/flashcards-symbols/treble-clef.jpg"
+            "url": "/wdd330/music-room/images/flashcards-symbols/treble-clef.jpg"
         },
         {
             "name": "Quarter Note",
             "desc": "Play 1 count",
-            "url": "/week11/music-room/images/flashcards-symbols/quarter-note.jpg"
+            "url": "/wdd330/music-room/images/flashcards-symbols/quarter-note.jpg"
         },
         {
             "name": "Quarter Rest",
             "desc": "Rest 1 count",
-            "url": "/week11/music-room/images/flashcards-symbols/quarter-note-rest.jpg"
+            "url": "/wdd330/music-room/images/flashcards-symbols/quarter-note-rest.jpg"
         },
         {
             "name": "Grand Staff",
             "desc": "Both treble and bass staffs joined by a brace",
-            "url": "/week11/music-room/images/flashcards-symbols/grand-staff.jpg"
+            "url": "/wdd330/music-room/images/flashcards-symbols/grand-staff.jpg"
         },
         {
             "name": "Bass Clef",
             "desc": "",
-            "url": "/week11/music-room/images/flashcards-symbols/bass-clef.jpg"
+            "url": "/wdd330/music-room/images/flashcards-symbols/bass-clef.jpg"
         },
         {
             "name": "Dotted Quarter Note",
             "desc": "Play 1 and 1/2 counts (quarter note plus an eighth note)",
-            "url": "/week11/music-room/images/flashcards-symbols/dotted-quarter-note.jpg"
+            "url": "/wdd330/music-room/images/flashcards-symbols/dotted-quarter-note.jpg"
         }
     ]
 }
