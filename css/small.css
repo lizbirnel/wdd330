@@ -47,6 +47,14 @@ body {
     color: #3C403D;
   }
   
+.portfolio-content {
+  background-color: #A3BCB6 ;
+}
+
+.info {
+  border-bottom: solid black .5px;
+}
+
   a {
       color: #373737;
   }
