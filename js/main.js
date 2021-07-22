@@ -39,10 +39,10 @@ const links = [
     label: "Week10 notes",
     url: "week10/index.html",
   },
-  {
-    label: "Final Project Progress",
-    url: "week11/music-room/index.html",
-  },
+  // {
+  //   label: "Final Project Progress",
+  //   url: "week11/music-room/index.html",
+  // },
   {
     label: "Final Project: Elementary Music Web Application",
     url: "music-room/index.html",
