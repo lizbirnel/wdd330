@@ -1,0 +1,79 @@
+{
+    "notenames": [
+        {
+            "name": "C3",
+            "type": "space note",
+            "url": "/week11/music-room/images/noteflashcards/48bn.png"
+        },
+        {
+            "name": "D3",
+            "type": "line note",
+            "url": "/week11/music-room/images/noteflashcards/50bn.png"
+        },
+        {
+            "name": "E3",
+            "type": "space note",
+            "url": "/week11/music-room/images/noteflashcards/52bn.png"
+        },
+        {
+            "name": "F3",
+            "type": "line note",
+            "url": "/week11/music-room/images/noteflashcards/53bn.png"
+        },
+        {
+            "name": "G3",
+            "type": "space note",
+            "url": "/week11/music-room/images/noteflashcards/55bn.png"
+        },
+        {
+            "name": "A4",
+            "type": "line note",
+            "url": "/week11/music-room/images/noteflashcards/57bn.png"
+        },
+        {
+            "name": "B4",
+            "type": "space note",
+            "url": "/week11/music-room/images/noteflashcards/59bn.png"
+        },
+        {
+            "name": "C4",
+            "type": "line note",
+            "url": "/week11/music-room/images/noteflashcards/60bn.png"
+        },
+        {
+            "name": "D4",
+            "type": "space note",
+            "url": "/week11/music-room/images/noteflashcards/62tn.png"
+        },
+        {
+            "name": "E4",
+            "type": "line note",
+            "url": "/week11/music-room/images/noteflashcards/64tn.png"
+        },
+        {
+            "name": "F4",
+            "type": "space note",
+            "url": "/week11/music-room/images/noteflashcards/65tn.png"
+        },
+        {
+            "name": "G4",
+            "type": "line note",
+            "url": "/week11/music-room/images/noteflashcards/67tn.png"
+        },
+        {
+            "name": "A5",
+            "type": "space note",
+            "url": "/week11/music-room/images/noteflashcards/69tn.png"
+        },
+        {
+            "name": "B5",
+            "type": "line note",
+            "url": "/week11/music-room/images/noteflashcards/71tn.png"
+        },
+        {
+            "name": "C5",
+            "type": "space note",
+            "url": "/week11/music-room/images/noteflashcards/72tn.png"
+        }
+    ]
+}

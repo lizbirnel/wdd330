@@ -43,6 +43,10 @@ const links = [
     label: "Final Project Progress",
     url: "week11/music-room/index.html",
   },
+  {
+    label: "Final Project: Elementary Music Web Application",
+    url: "music-room/index.html",
+  },
 ];
 
 let list = document.getElementById("tableContents");

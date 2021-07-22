@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+    <meta name="description" content="Drums activity">
+    <title>Notes on the Staff | Mrs. B's Music Room</title>
+    <link rel="stylesheet" href="css/small.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/large.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    
+<body>
+    <header>
+        <a href="index.html"><img src="images/xylophone-bright.png" class="headerImg" alt="xylophone logo"></a>
+        <h1 class="heading">Grand Staff</h1>
+    </header>
+    <main > 
+        <div class="title">
+            <h2>Click the line or space to draw a note on the staff. Check your answer with the flashcard.</h2>
+        </div>
+        <div class="staffPage">       
+            <div id="staffWrapper" >
+                <div id="noteDetails">
+                    <p id="note_name"></p>
+                    <p id="note_type"></p> 
+                </div>
+                <div id="staffCanvasContainer">
+                    <canvas id="staffCanvas"></canvas>
+                </div>
+            </div>
+            <div class="tryNoteContainer">
+                <div class="noteFlashcard"></div>
+                <!-- <h3>Click the line or space for the note on the staff.</h3> -->
+                <div class="buttons">
+                    <button id="new_note">Try Another</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="fixedfooter">
+        <p><a href="/index.html">&copy; Elizabeth Birnel</a> | Utah | WDD 330 | BYUI</p>
+    </footer>
+    <script src="js/staff.js"></script>
+    <script src="js/staff-flashcard.js"></script>
+</body>
+</html>
