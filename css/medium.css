@@ -7,6 +7,11 @@
         font-size: 1.5rem
     }
 
+    main {
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
     header, footer {
         border-radius: 10px;
     }

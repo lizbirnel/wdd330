@@ -82,7 +82,7 @@ body {
   li {
     background-color: #A3BCB6;
     margin: 15px ;
-    width: 90%;
+    /* width: 90%; */
     padding: 1rem 2rem;
    /*grid-column-start: -1;*/
   }
